@@ -1,7 +1,7 @@
 import express, { Request, Response, NextFunction } from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-// import userRoutes from './routes/user.route';
+import userRoutes from './routes/user.route';
 // import contactRoutes from './routes/contact.route';
 // import orderRoutes from './routes/order.route';
 // import tripRoutes from './routes/trip.route'; // Importer le fichier des routes
@@ -21,7 +21,7 @@ app.use(cors({
 }));
 
 // Utilisez le routeur pour les utilisateurs
-// app.use('/api/v1/users', userRoutes);
+app.use('/api/v1/users', userRoutes);
 // app.use('/api/v1/contact', contactRoutes);
 // app.use('/api/v1/orders', orderRoutes);
 // app.use('/api/v1/stripe', stripePaymentRoutes);
