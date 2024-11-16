@@ -37,6 +37,7 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 const PORT = process.env.PORT || 8800;
 
 // Connexion à MongoDB et démarrage du serveur
+console.log(process.env.MONGO_URI!);
 mongoose.connect(process.env.MONGO_URI!)
   .then(() => {
     console.log('MongoDB connecté');
